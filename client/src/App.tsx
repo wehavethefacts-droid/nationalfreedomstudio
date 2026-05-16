@@ -1,8 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch, Router } from "wouter";
-import { useHashLocation } from "wouter/use-hash-location";
+import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Layout from "./components/Layout";
 import MobileMenu from "./components/MobileMenu";
@@ -16,7 +15,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 
-function AppRouter() {
+function Router() {
   return (
     <>
       <MobileMenu />
@@ -44,20 +43,11 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <AppRouter />
+          <Router />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );
 }
 
-// Use hash-based routing for GitHub Pages compatibility
-function AppWithRouter() {
-  return (
-    <Router hook={useHashLocation}>
-      <App />
-    </Router>
-  );
-}
-
-export default AppWithRouter;
+export default App;
