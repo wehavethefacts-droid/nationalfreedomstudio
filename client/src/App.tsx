@@ -22,16 +22,15 @@ function AppRouter() {
       <MobileMenu />
       <Layout>
         <Switch>
-        <Route path={"/"} component={Home} />
-        <Route path={"/studio"} component={Studio} />
-        <Route path={"/gear"} component={Gear} />
-        <Route path={"/discography"} component={Discography} />
-        <Route path={"/mastering"} component={Mastering} />
-        <Route path={"/about"} component={About} />
-        <Route path={"/contact"} component={Contact} />
-        <Route path={"/404"} component={NotFound} />
-        {/* Final fallback route */}
-        <Route component={NotFound} />
+          <Route path="/" component={Home} />
+          <Route path="/studio" component={Studio} />
+          <Route path="/gear" component={Gear} />
+          <Route path="/discography" component={Discography} />
+          <Route path="/mastering" component={Mastering} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/404" component={NotFound} />
+          <Route component={NotFound} />
         </Switch>
       </Layout>
     </>
