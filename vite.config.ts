@@ -79,9 +79,6 @@ function vitePluginManusDebugCollector(): Plugin {
     name: "manus-debug-collector",
 
     transformIndexHtml(html) {
-      // Always skip in production (including GitHub Pages)
-      return html;
-      /* Original code disabled for GitHub Pages
       if (process.env.NODE_ENV === "production") {
         return html;
       }
