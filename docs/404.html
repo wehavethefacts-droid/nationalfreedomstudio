@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      // Redirect all 404s to the index.html with the path preserved
+      // This allows client-side routing to work on GitHub Pages
+      const path = window.location.pathname;
+      const search = window.location.search;
+      
+      // Only redirect if this isn't already the index
+      if (path !== '/' && !path.endsWith('index.html')) {
+        // Store the path in sessionStorage so index.html can use it
+        sessionStorage.setItem('redirectPath', path + search);
+        // Redirect to index.html
+        window.location.replace('/index.html');
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
