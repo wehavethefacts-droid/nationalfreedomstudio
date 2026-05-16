@@ -16,7 +16,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 
-function Router() {
+function AppRouter() {
   return (
     <>
       <MobileMenu />
@@ -45,7 +45,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router hook={useHashLocation}>
-            <Router />
+            <AppRouter />
           </Router>
         </TooltipProvider>
       </ThemeProvider>
